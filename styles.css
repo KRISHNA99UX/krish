@@ -1,0 +1,766 @@
+/* Clean and Simple Color Scheme */
+:root {
+    --primary: #ffffff;      /* White */
+    --secondary: #f3f4f6;    /* Light Gray */
+    --accent: #2563eb;       /* Classic Blue */
+    --text: #111827;         /* Almost Black */
+    --text-light: #4b5563;   /* Medium Gray */
+    --gradient1: linear-gradient(135deg, #2563eb, #3b82f6);
+    --shadow: rgba(37, 99, 235, 0.1);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary);
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1 {
+    font-size: 3.5rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: var(--secondary);
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background: var(--primary);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px var(--shadow);
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Countdown Timer */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+#countdown div {
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    min-width: 120px;
+    text-align: center;
+}
+
+#countdown span {
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
+}
+
+/* Sections */
+section {
+    padding: 4rem 1rem;
+}
+
+.event-details {
+    background: var(--primary);
+}
+
+.teachers-section {
+    background: var(--secondary);
+}
+
+.memories-section {
+    background: var(--primary);
+}
+
+/* Cards */
+.details-grid, .memory-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.detail-item, .memory-card, .quote-card {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover, .memory-card:hover, .quote-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.rsvp-button {
+    background: var(--gradient1);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+/* Modal */
+.modal-content {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary);
+    border-radius: 6px;
+    background: var(--primary);
+    color: var(--text);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--shadow);
+}
+
+/* Progress Bar */
+.countdown-progress {
+    height: 4px;
+    background: var(--secondary);
+    margin-top: -4px;
+}
+
+.countdown-progress-bar {
+    height: 100%;
+    background: var(--gradient1);
+}
+
+/* Fix for White Space */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    margin: 0;
+    padding: 4rem 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    #countdown div {
+        min-width: 100px;
+        padding: 1rem;
+    }
+
+    #countdown span {
+        font-size: 2rem;
+    }
+}
+
+.creator-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background: var(--primary);
+    color: var(--text);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px var(--shadow);
+    font-weight: 500;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.modal-content input {
+    background: var(--secondary);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    color: var(--text);
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.modal-content input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--shadow);
+}
+
+.modal-content button[type="submit"] {
+    background: var(--gradient1);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.countdown-progress {
+    height: 4px;
+    background: var(--secondary);
+}
+
+.countdown-progress-bar {
+    background: var(--gradient1);
+    height: 6px;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.loading-spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--accent);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Enhanced Quote Section Styles */
+.quotes-section {
+    padding: 6rem 2rem;
+    background: var(--gradient1);
+    color: white;
+}
+
+.quote-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.quote-card {
+    background: var(--primary);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 25px var(--shadow);
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px var(--shadow);
+}
+
+.quote-card i {
+    color: var(--accent);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.quote-card p {
+    font-size: 1.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.quote-card span {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+/* Special Styling for Board Exam Wishes */
+.wishes-card {
+    background: linear-gradient(45deg, 
+        rgba(139, 92, 246, 0.2), 
+        rgba(59, 130, 246, 0.2)
+    );
+}
+
+.wishes-card .board-wish {
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wishes-card i {
+    color: #FFD700;
+    animation: starTwinkle 1.5s infinite;
+}
+
+/* Memory Quote Special Styling */
+.memory-quote {
+    background: linear-gradient(45deg, 
+        rgba(139, 92, 246, 0.2), 
+        rgba(59, 130, 246, 0.2)
+    );
+}
+
+.memory-quote i {
+    color: #FF6B6B;
+    animation: heartBeat 1.5s infinite;
+}
+
+/* Student Quote Special Styling */
+.student-quote {
+    background: linear-gradient(45deg, 
+        rgba(139, 92, 246, 0.2), 
+        rgba(59, 130, 246, 0.2)
+    );
+}
+
+.student-quote i {
+    color: #FFD700;
+}
+
+/* Animations */
+@keyframes starTwinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Teachers Section */
+.teachers-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.message-card {
+    position: relative;
+    height: 380px;
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 15px 30px var(--shadow);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: var(--primary);
+    box-shadow: 0 10px 25px var(--shadow);
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background: var(--gradient1);
+    color: white;
+    font-weight: 600;
+    transform: rotateY(180deg);
+}
+
+.message-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.message-card:hover .card-back {
+    transform: rotateY(360deg);
+}
+
+/* Memory Wall */
+.memories-section {
+    padding: 6rem 2rem;
+    color: white;
+}
+
+.memory-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    background: var(--primary);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px var(--shadow);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.memory-card:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    border-color: var(--accent);
+}
+
+.memory-card .year {
+    font-size: 3.5rem;
+    color: var(--accent);
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    margin-bottom: 1rem;
+}
+
+.memory-card p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Enhanced Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.reveal.visible {
+    opacity: 1;
+}
+
+/* Enhanced Glowing Effects */
+@keyframes golden-glow {
+    0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); }
+}
+
+.memory-card:hover,
+.detail-item:hover,
+.quote-card:hover {
+    animation: golden-glow 2s infinite;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px var(--shadow);
+    border-color: var(--accent);
+}
+
+/* Particle Effects */
+.star {
+    background: var(--accent);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border-color: var(--accent);
+    border-top-color: transparent;
+}
+
+/* Message Modal */
+.message-modal {
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.message-content {
+    background: var(--secondary);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    color: var(--text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 2.8rem;
+    font-family: 'Cinzel', serif;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.hero-content {
+    background: rgba(26, 26, 46, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* Countdown Timer */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+#countdown div {
+    background: var(--primary);
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#countdown span {
+    font-size: 3rem;
+    color: var(--accent);
+    font-weight: 700;
+    display: block;
+}
+
+/* Buttons */
+.rsvp-button {
+    background: var(--gradient1);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 2rem auto;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Event Details */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.detail-item {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Memory Cards */
+.memory-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+}
+
+.year {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+.modal-content {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #countdown div {
+        min-width: 100px;
+    }
+
+    #countdown span {
+        font-size: 2rem;
+    }
+}
+
+/* Simple Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+} 

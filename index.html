@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class of 2025 Farewell Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Class of 2025<br>Farewell Celebration</h1>
+            <p class="subtitle">Join us for an unforgettable evening of memories and celebrations</p>
+            <div class="countdown-container">
+                <div id="countdown">
+                    <div><span id="days"></span>Days</div>
+                    <div><span id="hours"></span>Hours</div>
+                    <div><span id="minutes"></span>Minutes</div>
+                    <div><span id="seconds"></span>Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add progress bar -->
+    <div class="countdown-progress">
+        <div class="countdown-progress-bar"></div>
+    </div>
+
+    <!-- Event Details -->
+    <section class="event-details reveal">
+        <h2>Event Details</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>Date</h3>
+                <p>14th February 2025</p>
+            </div>
+            <div class="detail-item">
+                <h3>Time</h3>
+                <p>11:00 PM Onwards</p>
+            </div>
+            <div class="detail-item">
+                <h3>Venue</h3>
+                <p>Courtyard, Govt. Boys Higher Secondary School<br>Surajpur, Chhattisgarh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <div class="rsvp-container">
+        <button class="rsvp-button animate-pulse" onclick="toggleRSVPForm()">Confirm Your Presence</button>
+    </div>
+
+    <!-- RSVP Modal -->
+    <div class="rsvp-modal" id="rsvpModal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleRSVPForm()">&times;</span>
+            <h2>RSVP Form</h2>
+            <form id="rsvpForm" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Class" required>
+                <input type="text" placeholder="Section" required>
+                <input type="tel" placeholder="Contact Number" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="confirmation" id="confirmationMessage">
+                <h3>🎉 Thank you for registering!</h3>
+                <p>See you at the event!</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="creator-btn" onclick="showCreator()">🌐 Website Made By Krishna</button>
+
+    <!-- Add floating particles container -->
+    <div class="particles-container"></div>
+
+    <!-- Add loading spinner -->
+    <div class="loading-spinner"></div>
+
+    <!-- Update Quotes Section -->
+    <section class="quotes-section reveal">
+        <div class="quote-container">
+            <!-- Teacher Quote -->
+            <div class="quote-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"A teacher affects eternity; they can never tell where their influence stops."</p>
+                <span>- Henry Adams</span>
+            </div>
+            
+            <!-- Student Quotes -->
+            <div class="quote-card student-quote">
+                <i class="fas fa-graduation-cap"></i>
+                <p>"As you step into the next chapter of your life, remember that you'll always be a part of our school family. Your journey here may end, but your story is just beginning."</p>
+                <span>- Class of 2025</span>
+            </div>
+
+            <!-- Board Exam Wishes -->
+            <div class="quote-card wishes-card">
+                <i class="fas fa-star"></i>
+                <p class="board-wish">"Dear Class 12th Students,<br>
+                May your hard work shine bright in the board exams. Believe in yourself, stay focused, and success will follow. Your dedication will light up your path to success."</p>
+                <span>- Teachers & Staff</span>
+            </div>
+
+            <!-- Memory Quote -->
+            <div class="quote-card memory-quote">
+                <i class="fas fa-heart"></i>
+                <p>"The friends we've made, the lessons we've learned, and the memories we've created will forever remain in our hearts. These school days are our golden days."</p>
+                <span>- Batch 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Teacher Appreciation Section -->
+    <section class="teachers-section reveal">
+        <h2>Thank You, Teachers</h2>
+        <p class="section-subtitle">For guiding us, inspiring us, and believing in us</p>
+        
+        <div class="teachers-grid">
+            <div class="message-card" onclick="showMessage('principal')">
+                <div class="card-front">
+                    <img src="https://img.icons8.com/color/96/000000/teacher.png" alt="Principal">
+                    <h3>To Our Principal</h3>
+                    <p>Click to read message</p>
+                </div>
+                <div class="card-back">
+                    <p>Thank you for your leadership and guidance throughout our journey.</p>
+                </div>
+            </div>
+            
+            <div class="message-card" onclick="showMessage('teachers')">
+                <div class="card-front">
+                    <img src="https://img.icons8.com/color/96/000000/group.png" alt="Teachers">
+                    <h3>To Our Teachers</h3>
+                    <p>Click to read message</p>
+                </div>
+                <div class="card-back">
+                    <p>Your dedication and patience have shaped our future. We are forever grateful.</p>
+                </div>
+            </div>
+            
+            <div class="message-card" onclick="showMessage('staff')">
+                <div class="card-front">
+                    <img src="https://img.icons8.com/color/96/000000/school.png" alt="Staff">
+                    <h3>To Our Staff</h3>
+                    <p>Click to read message</p>
+                </div>
+                <div class="card-back">
+                    <p>Thank you for making our school life comfortable and memorable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Memory Wall Section -->
+    <section class="memories-section reveal">
+        <h2>Our Journey Together</h2>
+        <div class="memory-wall">
+            <div class="memory-card">
+                <span class="year">2022</span>
+                <p>Beginning of Our Journey</p>
+            </div>
+            <div class="memory-card">
+                <span class="year">2023</span>
+                <p>Growing Together</p>
+            </div>
+            <div class="memory-card">
+                <span class="year">2024</span>
+                <p>Creating Memories</p>
+            </div>
+            <div class="memory-card">
+                <span class="year">2025</span>
+                <p>Farewell Celebration</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
